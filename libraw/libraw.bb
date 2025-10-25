@@ -7,13 +7,13 @@ DESCRIPTION = "LibRaw is a library for reading RAW files obtained from digital p
 
 S = "${WORKDIR}/LibRaw-${PV}"
 
-SRC_URI="https://www.libraw.org/data/LibRaw-0.20.0.tar.gz"
-SRC_URI[md5sum] = "4d9ca72f140ee3be5e5e8f3259d68cf3"
+SRC_URI="https://www.libraw.org/data/LibRaw-0.21.4.tar.gz"
+SRC_URI[md5sum] = "26e046621c38c10f56c195dfd29a5661"
 
 LICENSE = "LGPL-2.1"
-LIC_FILES_CHKSUM = "file://${S}/COPYRIGHT;md5=74c9dffdc42805f9c0de2f97df6031fc  "
+LIC_FILES_CHKSUM = "file://${S}/COPYRIGHT;md5=1501ae0aa3c8544e63f08d6f7bf88a6f  "
 
-PV = "0.20.0"
+PV = "0.21.4"
 PR = "r0"
 
 DEPENDS += " patchelf-native"
@@ -44,20 +44,20 @@ do_install () {
 }
 
 INHIBIT_PACKAGE_DEBUG_SPLIT = '1'
-INSANE_SKIP_${PN} += "already-stripped dev-so"
+INSANE_SKIP:${PN} += "already-stripped dev-so"
 
 PACKAGES = " \
     ${PN}     \
     ${PN}-dev \
 "
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${bindir}/* \ 
     ${libdir}/* \
     ${datadir}/* \
 "
 
-FILES_${PN}-dev += " \
+FILES:${PN}-dev += " \
     ${bindir}/* \
     ${libdir}/* \
     ${includedir}/* \
