@@ -5,7 +5,6 @@
 SUMMARY = "FreeImage Library"
 DESCRIPTION = "Open Source library project for developers who would like to support popular graphics image formats"
 
-
 S = "${WORKDIR}/FreeImage"
 
 LICENSE = "GPLv2"
@@ -25,18 +24,18 @@ do_install () {
 }
 
 #INHIBIT_PACKAGE_STRIP = "1"
-INSANE_SKIP_${PN} += "already-stripped dev-so"
+INSANE_SKIP:${PN} += "already-stripped dev-so"
 
 PACKAGES = " \
     ${PN}     \
     ${PN}-dev \
 "
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${libdir}/* \
 "
 
-FILES_${PN}-dev += " \
+FILES:${PN}-dev += " \
     ${libdir}/* \
     ${includedir}/* \
 "
