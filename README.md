@@ -11,5 +11,5 @@ Recipes for imaging-related libraries
 
 ## libraw
 
-- [LibRaw](https://github.com/LibRaw/LibRaw) v0.21.4
+- [LibRaw](https://github.com/LibRaw/LibRaw) v0.22.0
 - Static library (\*.a) is not included
